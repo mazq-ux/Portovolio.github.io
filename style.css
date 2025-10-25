@@ -1,49 +1,111 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio Muhammad Rizq Maulana</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+/* Gaya dasar halaman */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
 
-    <header class="container">
-        <!-- Bagian kiri: teks -->
-         
-        <div class="text">
-            <img src="WhatsApp Image 2025-10-25 at 12.09.55.jpeg" alt="Logo Maul Web Agency" class="logo">
-            <h1>Muhammad Rizq Maulana</h1>
-            <h2>Programmer</h2>
-            <h3>SMK Muhammadiyah 3 Tangerang Selatan</h3>
-         <div class="image">
-            <img src="WhatsApp Image 2025-10-25 at 12.33.52.jpeg" alt="Gambar Samping" class="side-img">
-        </div>
-            <p>
-                Halo! Saya <strong>Muhammad Rizq Maulana</strong>, pelajar yang memiliki semangat tinggi 
-                di bidang <em>pengembangan web</em> dan <em>teknologi digital</em>. 
-                Saya tertarik membuat desain web yang menarik dan interaktif menggunakan HTML, CSS, dan JavaScript.
-            </p>
+/* Layout utama: teks di kiri, gambar di kanan */
+.container {
+    display: flex;
+    justify-content: space-between; /* Jarak antara teks dan gambar */
+    align-items: center; /* Sejajar vertikal */
+    background-color: #4b6cb7;
+    color: white;
+    padding: 40px;
+}
 
-            <p>
-                Portofolio ini saya buat untuk memperkenalkan diri dan menampilkan kemampuan yang telah saya pelajari.
-            </p>
-        </div>
+/* Bagian teks (kiri) */
+.text {
+    width: 50%;
+}
 
-        <!-- Bagian kanan: gambar -->
-        
-    </header>
+/* Logo di bagian teks */
+.logo {
+    width: 100px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
 
-    <section class="skills">
-        <h2>Kemampuan Saya</h2>
-        <ul>
-            <li>HTML (Struktur Halaman Web)</li>
-            <li>CSS (Desain & Tata Letak)</li>
-            <li> JavaScript Dasar (Interaktivitas)</li>
-            <li>Desain Responsif (Tampilan di HP & PC)</li>
-            <li> Menggunakan GitHub Pages</li>
-        </ul>
-    </section>
+/* Judul dan subjudul */
+h1 {
+    font-size: 28px;
+    margin-bottom: 5px;
+}
 
-</body>
-</html>
+h2, h3 {
+    font-weight: normal;
+    margin: 5px 0;
+}
+
+/* Paragraf perkenalan */
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-top: 15px;
+    color: #f0f0f0;
+}
+
+/* Bagian gambar (kanan) */
+.image {
+    width: 45%;
+    display: flex;
+    justify-content: center; /* Tengah horizontal */
+    align-items: center;     /* Tengah vertikal */
+}
+
+/* Gambar samping — dibuat bulat */
+.side-img {
+    width: 250px; /* Ukuran gambar */
+    height: 250px; /* Tinggi sama dengan lebar supaya bulat */
+    object-fit: cover; /* Menyesuaikan isi gambar di dalam lingkaran */
+    border-radius: 50%; /* Membuat gambar bulat */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    border: 4px solid white; /* Tambahkan garis putih biar lebih elegan */
+}
+
+/* Bagian kemampuan */
+.skills {
+    background-color: #ffffff;
+    text-align: center;
+    padding: 30px;
+}
+
+.skills h2 {
+    color: #4b6cb7;
+    margin-bottom: 15px;
+}
+
+.skills ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skills li {
+    background-color: #e0e7ff;
+    color: #333;
+    margin: 10px auto;
+    padding: 10px;
+    width: 80%;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+/* Responsif untuk HP */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text, .image {
+        width: 100%;
+    }
+
+    .side-img {
+        width: 180px;
+        height: 180px;
+    }
+}
